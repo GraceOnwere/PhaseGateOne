@@ -1,17 +1,24 @@
 def check_like_text(array):
-    
-    for count in range(0,len(array),1):
-            
-#       new_array = [array[count]]
-        if len(array) == 0:
-            return "no one likes this"
-        elif len(array) == 1:
+    if len(array) == 0:
 
-            return  array[count] + "likes this"
+        return f'"no one likes this"'
 
-        elif len(array) == 2:
+    if len(array) == 1:
 
-            return array[count] +" " + "and likes this"
-#    for counter in range(0,len(new_array),1):
+        return f'"{array[0]} likes"'
 
-print(check_like_text(["Peter","Jacob"]))
+    if len(array) == 2:
+
+        return f'"{array[0]} and {array[1]} likes this"'
+
+    if len(array) == 3:
+
+        return f'"{array[0]}, {array[1]} and {array[2]} likes this"'
+
+    if len(array) >= 4:
+
+
+        return f'"{array[0]},{array[1]} and {len(array) - 2} others likes this"'
+
+
+#print(check_like_text(["Peter","Mary","Grace","Miracle","Tonye"]))

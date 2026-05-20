@@ -2,7 +2,7 @@ public class LevelFour{
 
     public static void main (String [] args){
 
-    System.out.println(reverseNumber("123"));
+    System.out.println(); reverseNumber("12");
 
     System.out.println(addTwoNumbers(12,12));
 
@@ -76,15 +76,16 @@ public class LevelFour{
     return area;
     }
 
-    public static String reverseNumber (String number){
+    public static void reverseNumber (String number){
     
     String reversedNumber = "";
 
-    for (int count = number.length(); count > 0; count++ ){
-//    reversedNumber += charAt[count];
-    }
+    for (int count = number.length() - 1; count > 0; count--){
+    reversedNumber = reversedNumber + number.charAt(count);
 
-    return reversedNumber;
+    }
+                System.out.print(reversedNumber);
+//    return reversedNumber;
     }
 
 //    public static int checkOccurrences(String word){
